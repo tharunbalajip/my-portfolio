@@ -1,0 +1,700 @@
+/* ==============================
+   BASIC RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f5f7fa;
+    color: #222;
+}
+
+
+/* ==============================
+   HEADER
+================================= */
+
+header {
+    background: #111827;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+
+/* ==============================
+   NAVIGATION
+================================= */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   GENERAL SECTIONS
+================================= */
+
+section {
+    padding: 80px 8%;
+    position: relative;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+
+/* ==============================
+   HOME / HERO
+================================= */
+
+#home {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 700px;
+    animation: fadeUp 1s ease;
+}
+
+.welcome-text {
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+#home h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* ==============================
+   PROFILE IMAGE
+================================= */
+
+.profile-container {
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #38bdf8;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: floatImage 3s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==============================
+   BUTTONS
+================================= */
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #38bdf8;
+    color: #111827;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid #38bdf8;
+}
+
+.secondary-btn:hover {
+    background: #38bdf8;
+    color: #111827;
+}
+
+
+/* ==============================
+   ABOUT
+================================= */
+
+#about {
+    background: #f8fafc;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h2 {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* ==============================
+   INFO CARDS
+================================= */
+
+.info-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeUp 0.8s ease;
+}
+
+.info-card h3 {
+    margin-bottom: 8px;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==============================
+   SKILLS
+================================= */
+
+#skills {
+    background: #eef2ff;
+}
+
+.skills-container {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeUp 0.8s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.skill-card h3 {
+    margin-bottom: 15px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    border-radius: 10px;
+    background: #38bdf8;
+}
+
+.html-level {
+    width: 90%;
+}
+
+.css-level {
+    width: 80%;
+}
+
+.js-level {
+    width: 65%;
+}
+
+.python-level {
+    width: 85%;
+}
+
+.java-level {
+    width: 70%;
+}
+
+
+/* ==============================
+   PROJECTS
+================================= */
+
+#projects {
+    background: #f8fafc;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeUp 0.8s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 15px;
+}
+
+.project-btn {
+    margin-top: 10px;
+}
+
+
+/* ==============================
+   CONTACT
+================================= */
+
+#contact {
+    background: white;
+}
+
+#contactForm {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+#contactForm textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contactForm button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #111827;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#contactForm button:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+#formMessage {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* ==============================
+   ZOMBIE SURVIVAL PAGE
+================================= */
+
+.project-details {
+    min-height: 90vh;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-content {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.project-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.project-intro {
+    max-width: 750px;
+    margin: auto;
+    font-size: 19px;
+    margin-bottom: 40px;
+}
+
+
+/* ==============================
+   GAME SCREENSHOT
+================================= */
+
+.game-screenshot {
+    width: 80%;
+    max-width: 650px;
+    margin: 30px auto 40px;
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.game-screenshot img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+
+/* ==============================
+   PROJECT INFORMATION
+================================= */
+
+.project-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.project-info .info-card {
+    color: #222;
+}
+
+.features,
+.how-to-run {
+    background: white;
+    color: #222;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.features h3,
+.how-to-run h3 {
+    margin-bottom: 15px;
+}
+
+.features ul {
+    padding-left: 25px;
+}
+
+.features li {
+    margin-bottom: 8px;
+}
+
+.how-to-run p {
+    margin-bottom: 10px;
+}
+
+
+/* ==============================
+   ANIMATIONS
+================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    #home {
+        min-height: 80vh;
+        padding: 50px 5%;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
+
+    #home h2 {
+        font-size: 36px;
+    }
+
+    #home p {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text h2 {
+        text-align: center;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    #contactForm {
+        width: 100%;
+    }
+
+    .project-content h2 {
+        font-size: 36px;
+    }
+
+    .project-info {
+        grid-template-columns: 1fr;
+    }
+
+    .project-intro {
+        font-size: 17px;
+    }
+
+    .game-screenshot {
+        width: 95%;
+    }
+
+    .game-screenshot img {
+        max-height: 300px;
+    }
+
+}
+/* ==============================
+   SOCIAL LINKS
+================================= */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-btn:hover {
+    background: #38bdf8;
+    color: #111827;
+    transform: translateY(-3px);
+}
+/* ==============================
+   PROJECT BUTTONS
+================================= */
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
